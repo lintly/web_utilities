@@ -1,4 +1,3 @@
-import "./Base64.css";
 import { SetStateAction, useState } from "react";
 import copyIcon from "/copy-icon.svg";
 
@@ -40,7 +39,7 @@ const Base64 = () => {
             <div className="flexBox">
                 <div style={{ width: "50%" }}>
                     <h2>
-                        Encode&nbsp;&nbsp;&nbsp;&nbsp;
+                        String To Encode&nbsp;&nbsp;&nbsp;&nbsp;
                         <button
                             className="copyButton"
                             onClick={() =>
@@ -55,11 +54,11 @@ const Base64 = () => {
                         value={plainText}
                         onChange={handlePlainChange}
                     />
-                    <button onClick={() => encode()}>Encode</button>
+                    <button onClick={() => encode()}>Encode =&gt;</button>
                 </div>
                 <div style={{ width: "50%" }}>
                     <h2>
-                        Decode&nbsp;&nbsp;&nbsp;&nbsp;
+                        String To Decode&nbsp;&nbsp;&nbsp;&nbsp;
                         <button
                             className="copyButton"
                             onClick={() =>
@@ -74,10 +73,10 @@ const Base64 = () => {
                         value={encodedText}
                         onChange={handleEncodeChange}
                     />
-                    <button onClick={() => decode()}>Decode</button>
+                    <button onClick={() => decode()}>&lt;= Decode</button>
                 </div>
             </div>
-            <button onClick={() => clearAll()}>Clear All</button>
+            <button onClick={() => clearAll()} className="clear-all-button">Clear All</button>
         </>
     );
 };

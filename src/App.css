@@ -21,3 +21,45 @@
   border: none;
   cursor: pointer;
 }
+
+button {
+  background-color: green;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.menu-button {
+  background-color: slategray;
+}
+
+.flexBox {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.copyButton {
+  background-color: transparent;
+  width: 20px;
+  height: 30px;
+}
+
+.copyImg {
+  width: 20px;
+  filter: invert(37%) sepia(93%) saturate(7471%) hue-rotate(356deg) brightness(91%) contrast(135%);
+  cursor: pointer;
+  padding: 0;
+}
+
+.clear-all-button {
+  background-color: purple;
+}
+
+h2 {
+  height: 50px;
+}

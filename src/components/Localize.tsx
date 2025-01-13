@@ -2,8 +2,6 @@ import { SetStateAction, useState } from "react";
 import { localize } from 'pseudo-localization'; // https://github.com/tryggvigy/pseudo-localization/tree/master
 import copyIcon from "/copy-icon.svg";
 
-import "./Localize.css";
-
 const Localize = () => {
     const [plainText, setPlainText] = useState<string>("");
     const [localText, setLocalText] = useState<string>("");
@@ -12,12 +10,6 @@ const Localize = () => {
         target: { value: SetStateAction<string> };
     }) => {
         setPlainText(event.target.value);
-    };
-
-    const handleEncodeChange = (event: {
-        target: { value: SetStateAction<string> };
-    }) => {
-        setLocalText(event.target.value);
     };
 
     const localIt = () => {
@@ -35,18 +27,17 @@ const Localize = () => {
             <div className="flexBox">
                 <div style={{ width: "50%" }}>
                     <h2>
-                        Encode
+                        String To Localize
                     </h2>
                     <textarea
                         style={{ width: "100%", height: "200px" }}
                         value={plainText}
                         onChange={handlePlainChange}
                     />
-                    <button onClick={() => localIt()}>Localize</button>
                 </div>
-                <div style={{ width: "50%" }}>
+                <div style={{ width: "50%"  }}>
                     <h2>
-                        Decode&nbsp;&nbsp;&nbsp;&nbsp;
+                        Localized String&nbsp;&nbsp;&nbsp;&nbsp;
                         <button
                             className="copyButton"
                             onClick={() =>
@@ -59,11 +50,11 @@ const Localize = () => {
                     <textarea
                         style={{ width: "100%", height: "200px" }}
                         value={localText}
-                        onChange={handleEncodeChange}
                     />
                 </div>
             </div>
-            <button onClick={() => clearAll()}>Clear All</button>
+            <button onClick={() => localIt()}>Localize Me!</button>
+            <button className="clear-all-button" onClick={() => clearAll()}>Clear All</button>
         </div>
     );
 };
