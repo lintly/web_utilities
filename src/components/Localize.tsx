@@ -39,7 +39,7 @@ const Localize = () => {
         <div style={{ width: "50%" }}>
           <h2>String To Localize</h2>
           <textarea
-            style={{ width: "100%", height: "200px" }}
+            style={{ width: "100%", height: "200px", fontSize: "16px" }}
             value={plainText}
             onChange={handlePlainChange}
             onFocus={() => setPlainText("")}
@@ -56,7 +56,7 @@ const Localize = () => {
             </button>
           </h2>
           <textarea
-            style={{ width: "100%", height: "200px" }}
+            style={{ width: "100%", height: "200px", fontSize: "16px" }}
             value={localText}
           />
         </div>
