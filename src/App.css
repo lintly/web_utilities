@@ -1,65 +1,67 @@
 #root {
-  width: 100%;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  background-color: #3d3d3d;
-  width: 100%;
-  height: 50px;
-  padding: 5px;
-  border: 1px solid red;
-}
-
-.header button {
-  color: white;
-  margin-right: 5px;
-  border: none;
-  cursor: pointer;
-}
-
-button {
-  background-color: green;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-.menu-button {
-  background-color: slategray;
-}
-
-.flexBox {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  gap: 10px;
-}
-
-.copyButton {
-  background-color: transparent;
-  width: 20px;
-  height: 30px;
+    width: 100%;
+    text-align: center;
 }
 
 .copyImg {
-  width: 20px;
-  filter: invert(37%) sepia(93%) saturate(7471%) hue-rotate(356deg) brightness(91%) contrast(135%);
-  cursor: pointer;
-  padding: 0;
+    width: 20px;
+    filter: invert(37%) sepia(93%) saturate(7471%) hue-rotate(356deg)
+        brightness(91%) contrast(135%);
+    cursor: pointer;
+    padding: 0;
 }
 
+/*
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #3d3d3d;
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    border: 1px solid red;
+}
+
+.header button {
+    color: white;
+    margin-right: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button {
+    background-color: green;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.menu-button {
+    background-color: slategray;
+}
+
+.flexBox {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.copyButton {
+    background-color: transparent;
+    width: 20px;
+    height: 30px;
+}
+
+
+
 .clear-all-button {
-  background-color: purple;
+    background-color: purple;
 }
 
 h2 {
-  height: 50px;
-}
+    height: 50px;
+} */
