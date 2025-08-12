@@ -1,8 +1,9 @@
 import { SetStateAction, useState } from "react";
 import { localize } from "pseudo-localization"; // https://github.com/tryggvigy/pseudo-localization/tree/master
 import copyIcon from "/copy-icon.svg";
+import { Button } from "react-bootstrap";
 
-const Localize = () => {
+const Localizer = () => {
   const [plainText, setPlainText] = useState<string>("");
   const [localText, setLocalText] = useState<string>("");
   const [status, setStatus] = useState<string>("");
@@ -33,43 +34,46 @@ const Localize = () => {
   };
 
   return (
-    <div>
+    <div className="w-100 p-2">
       <h1>PsuedoLocalization</h1>
-      <div className="flexBox">
-        <div style={{ width: "50%" }}>
-          <h2>String To Localize</h2>
+      <div className="d-flex">
+        <div className="w-50">
+          <h2 style={{ height: "45px" }}>String To Localize</h2>
           <textarea
-            style={{ width: "100%", height: "200px", fontSize: "16px" }}
+            style={{ width: "98%", height: "200px", fontSize: "16px" }}
             value={plainText}
             onChange={handlePlainChange}
             onFocus={() => setPlainText("")}
           />
         </div>
-        <div style={{ width: "50%" }}>
-          <h2>
+        <div className="w-50">
+          <h2 style={{ height: "45px" }}>
             Localized String&nbsp;&nbsp;&nbsp;&nbsp;
-            <button
-              className="copyButton"
-              onClick={() => copyLocalizedText(localText)}
-            >
+            <Button variant="dark" onClick={() => copyLocalizedText(localText)}>
               <img src={copyIcon} className="copyImg" />
-            </button>
+            </Button>
           </h2>
           <textarea
-            style={{ width: "100%", height: "200px", fontSize: "16px" }}
+            style={{ width: "98%", height: "200px", fontSize: "16px" }}
             value={localText}
           />
         </div>
       </div>
-      {status && (
-        <span style={{ color: "red", fontWeight: "bold" }}>{status}</span>
-      )}
-      <button onClick={() => localIt()}>Localize Me!</button>
-      <button className="clear-all-button" onClick={() => clearAll()}>
-        Clear All
-      </button>
+      <div>
+        {status && (
+          <span style={{ color: "red", fontWeight: "bold" }}>{status}</span>
+        )}
+        <div className="d-flex flex-column justify-content-center gap-2 px-3">
+          <Button variant="success" onClick={() => localIt()}>
+            Localize Me!
+          </Button>
+          <Button variant="danger" onClick={() => clearAll()}>
+            Clear All
+          </Button>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default Localize;
+export default Localizer;

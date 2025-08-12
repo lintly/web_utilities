@@ -1,5 +1,6 @@
 import { SetStateAction, useState } from "react";
 import copyIcon from "/copy-icon.svg";
+import { Button } from "react-bootstrap";
 
 const Base64 = () => {
   const [plainText, setPlainText] = useState<string>("");
@@ -39,48 +40,58 @@ const Base64 = () => {
   };
 
   return (
-    <>
+    <div className="w-100 p-2">
       <h1>Base64 Encode/Decode</h1>
-      <div className="flexBox">
-        <div style={{ width: "50%" }}>
+      <div className="d-flex">
+        <div className="w-50">
           <h2>
             String To Encode&nbsp;&nbsp;&nbsp;&nbsp;
-            <button
+            <Button
+              variant="dark"
               className="copyButton"
               onClick={() => navigator.clipboard.writeText(plainText)}
             >
               <img src={copyIcon} className="copyImg" />
-            </button>
+            </Button>
           </h2>
           <textarea
-            style={{ width: "100%", height: "200px", fontSize: "16px" }}
+            style={{ width: "98%", height: "200px", fontSize: "16px" }}
             value={plainText}
             onChange={handlePlainChange}
           />
-          <button onClick={() => encode()}>Encode =&gt;</button>
+          <Button variant="dark" onClick={() => encode()}>
+            Encode =&gt;
+          </Button>
         </div>
-        <div style={{ width: "50%" }}>
+        <div className="w-50">
           <h2>
             String To Decode&nbsp;&nbsp;&nbsp;&nbsp;
-            <button
+            <Button
+              variant="dark"
               className="copyButton"
               onClick={() => navigator.clipboard.writeText(encodedText)}
             >
               <img src={copyIcon} className="copyImg" />
-            </button>
+            </Button>
           </h2>
           <textarea
-            style={{ width: "100%", height: "200px", fontSize: "16px" }}
+            style={{ width: "98%", height: "200px", fontSize: "16px" }}
             value={encodedText}
             onChange={handleEncodeChange}
           />
-          <button onClick={() => decode()}>&lt;= Decode</button>
+          <Button variant="dark" onClick={() => decode()}>
+            &lt;= Decode
+          </Button>
         </div>
       </div>
-      <button onClick={() => clearAll()} className="clear-all-button">
+      <Button
+        variant="danger"
+        onClick={() => clearAll()}
+        className="clear-all-button"
+      >
         Clear All
-      </button>
-    </>
+      </Button>
+    </div>
   );
 };
 
