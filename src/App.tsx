@@ -5,6 +5,7 @@ import Base64 from "./components/Base64";
 import Localize from "./components/Localize";
 import JWT from "./components/JWT";
 import Colorizer from "./components/Colorizer";
+import PrettifyJson from "./components/PrettifyJson";
 
 enum sections {
   "home",
@@ -12,6 +13,7 @@ enum sections {
   "local",
   "jwt",
   "color",
+  "prettify",
 }
 
 function App() {
@@ -26,24 +28,35 @@ function App() {
         >
           Home
         </button>
-        <button
-          className="menu-button"
-          onClick={() => setSection(sections.base64)}
-        >
-          Base64 Encode/Decode
-        </button>
-        <button
-          className="menu-button"
-          onClick={() => setSection(sections.jwt)}
-        >
-          JWT Decode
-        </button>
+
         <button
           className="menu-button"
           onClick={() => setSection(sections.local)}
         >
           PsuedoLocalization Generator
         </button>
+
+        <button
+          className="menu-button"
+          onClick={() => setSection(sections.prettify)}
+        >
+          Prettify
+        </button>
+
+        <button
+          className="menu-button"
+          onClick={() => setSection(sections.jwt)}
+        >
+          JWT Decode
+        </button>
+
+        <button
+          className="menu-button"
+          onClick={() => setSection(sections.base64)}
+        >
+          Base64 Encode/Decode
+        </button>
+
         <button
           className="menu-button"
           onClick={() => setSection(sections.color)}
@@ -56,6 +69,7 @@ function App() {
       {section === sections.local && <Localize />}
       {section === sections.jwt && <JWT />}
       {section === sections.color && <Colorizer />}
+      {section === sections.prettify && <PrettifyJson />}
     </>
   );
 }
