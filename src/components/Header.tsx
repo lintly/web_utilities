@@ -12,6 +12,7 @@ const Header = () => {
             Home
           </Nav.Link>
         </Nav.Item>
+
         <Nav.Item>
           <Nav.Link
             href="/localizer"
@@ -20,14 +21,7 @@ const Header = () => {
             PsuedoLocalization Generator
           </Nav.Link>
         </Nav.Item>
-        <Nav.Item>
-          <Nav.Link
-            href="/colorizer"
-            active={location.pathname === "/colorizer"}
-          >
-            Colorizer
-          </Nav.Link>
-        </Nav.Item>
+
         <Nav.Item>
           <Nav.Link
             href="/i18comparison"
@@ -36,11 +30,31 @@ const Header = () => {
             i18Next File Comparison
           </Nav.Link>
         </Nav.Item>
+
         <Nav.Item>
           <Nav.Link href="/base64" active={location.pathname === "/base64"}>
             Base64 Encode/Decode
           </Nav.Link>
         </Nav.Item>
+
+        <Nav.Item>
+          <Nav.Link
+            href="/formatter"
+            active={location.pathname === "/formatter"}
+          >
+            JSON Formatter
+          </Nav.Link>
+        </Nav.Item>
+
+        <Nav.Item>
+          <Nav.Link
+            href="/colorizer"
+            active={location.pathname === "/colorizer"}
+          >
+            Colorizer
+          </Nav.Link>
+        </Nav.Item>
+
         <Nav.Item>
           <Nav.Link href="/jwt" active={location.pathname === "/jwt"}>
             JWT Decode
