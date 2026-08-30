@@ -9,7 +9,7 @@ const Header = () => {
       <Nav fill variant="tabs">
         <Nav.Item>
           <Nav.Link href="/" active={location.pathname === "/"}>
-            Home
+            Home FUCK
           </Nav.Link>
         </Nav.Item>
 
